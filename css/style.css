@@ -1,0 +1,191 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Navigation */
+header {
+  background: #333;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background: url ("../images/IMG_0458.png") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.hero .btn {
+  background: #28a745;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Menu */
+.menu-filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-filters button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-item {
+  background: #fff;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* About */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.about-content img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* Forms */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background: #218838;
+}
+
+/* Contact */
+.contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+footer .socials a {
+  color: white;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 100%;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
